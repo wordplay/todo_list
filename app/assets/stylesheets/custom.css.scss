@@ -1,0 +1,74 @@
+/* mixins, variables, etc. */
+ 
+$grayLighter: #cccccc;
+$gray: #999999;
+$grayDarker: #444444;
+ 
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ 
+/* universal */
+ 
+html {
+  overflow-y: scroll;
+}
+ 
+section {
+  overflow: auto;
+}
+ 
+header {
+  margin-bottom: 5px;
+}
+ 
+.center {
+  text-align: center;
+  h1 {
+    padding-bottom: 10px;
+  }
+}
+ 
+/* header */
+ 
+header {
+}
+ 
+/* footer */
+ 
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayLighter;
+  color: $grayLighter;
+  a {
+    color: $gray;
+    &:hover {
+      color: $grayDarker;
+      text-decoration: none;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+ 
+/* miscellaneous */
+ 
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}

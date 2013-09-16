@@ -1,0 +1,13 @@
+@import "bootstrap";
+ 
+/* If you don't like the default Bootstrap color scheme, you can download custom Bootstrap
+   reskin code from:
+ 
+http://bootswatch.com/
+ 
+   Download the CSS file for the reskin you want to use and paste all the code here, but
+   make sure it comes before the call to import the responsive module.
+*/
+ 
+/* Bootstrap responsive has to be after the reskin */
+@import "bootstrap-responsive";
