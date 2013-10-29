@@ -1,0 +1,12 @@
+<% provide(:title, "New Todo") %>
+<h1>New Todo</h1>
+<%= form_for :todo, url: todos_path do |f| %>
+  <p>
+    <%= f.label :message %><br>
+    <%= f.text_field :message %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

@@ -1,0 +1,11 @@
+<ul>
+  <% for todo in @todos %>
+    <li>
+      <%= link_to "↑", move_higher_todos_path(id: todo.id), method: :post,
+        remote: true %>
+      <%= link_to "↓", move_lower_todos_path(id: todo.id), method: :post,
+        remote: true %>
+      <%= todo.message %>
+    </li>
+  <% end %>
+</ul>

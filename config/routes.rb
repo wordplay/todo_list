@@ -6,6 +6,13 @@ TodoList::Application.routes.draw do
   root 'static_pages#home'
   get '/about', to: 'static_pages#about'
 
+  resources :todos, only: [:new, :create] do
+    collection do
+      post 'move_higher'
+      post 'move_lower'
+    end
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
